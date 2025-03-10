@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams Test Page</title>
+    <script>
+        function displayInput() {
+            let userInput = document.getElementById("userInput").value;
+            document.getElementById("displayArea").innerText = "You entered: " + userInput;
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        #displayArea {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to Your Teams Test Page!</h1>
     <p>This page is embedded inside Microsoft Teams.</p>
+
+    <input type="text" id="userInput" placeholder="Type something..." />
+    <button onclick="displayInput()">Submit</button>
+
+    <p id="displayArea"></p>
 </body>
 </html>
